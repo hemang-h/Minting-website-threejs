@@ -1,13 +1,14 @@
 {
-  "name": "self-coded-creation",
+  "name": "demo-minting-page",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "TokenMinds Demo ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev -H 0.0.0.0",
+    "prettier":"prettier -write .",
+    "lint": "next lint"
   },
   "keywords": [],
-  "author": "",
+  "author": "Hemang Joshi",
   "license": "MIT",
   "dependencies": {
     "@chakra-ui/react": "^1.8.5",
