@@ -9,7 +9,11 @@
                  <meta name="description" content="TOkenMinds Minting" />
              </Head>
 
-             <container maxW="container.md" pt={14}></container>
+             <container maxW="container.md" pt={14}>
+                 {children}
+             </container>
          </Box>
      )
- }
+ } 
+
+ export default Main
