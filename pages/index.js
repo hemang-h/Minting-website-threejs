@@ -1,4 +1,9 @@
-import {Container, Box, Center} from '@chakra-ui/react'
+import {
+    Container, 
+    Box, 
+    Center,
+    Heading
+} from '@chakra-ui/react'
 
 const page = () => {
     return(
@@ -12,6 +17,15 @@ const page = () => {
       >
         Who wants a free Airdrop
       </Box>
+
+      <Box display={{ md: 'flex' }}>
+        <Box flexGrow={1}>
+          <Heading as="h2" variant="page-title">
+            TokenMinds 
+          </Heading>
+          <p>Marketing/IDO/Development</p>
+        </Box>
+     </Box> 
         </Container>
     )
 }
