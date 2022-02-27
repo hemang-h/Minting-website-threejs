@@ -4,7 +4,7 @@
   "description": "TokenMinds Demo ",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
-    "prettier":"prettier -write .",
+    "prettier": "prettier -write .",
     "lint": "next lint"
   },
   "keywords": [],
