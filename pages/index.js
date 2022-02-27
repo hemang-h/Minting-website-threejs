@@ -10,6 +10,11 @@ import {
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
+import Image from 'next/image'
+
+const ProfileImage = chakra(Image, {
+    shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
+  })
 
 const page = () => {
     return(
@@ -29,7 +34,7 @@ const page = () => {
           <Heading as="h2" variant="page-title">
             TokenMinds
           </Heading>
-          <p>Full servie Blockchain & NFT Agency (Marketing / Developement)</p>
+          <p>Full service Blockchain & NFT Agency (Marketing / Developement)</p>
         </Box>
         <Box
           flexShrink={0}
@@ -47,7 +52,13 @@ const page = () => {
             borderRadius="full"
             overflow='hidden'
           >
-            
+            <ProfileImage
+              src="/images/takuya.jpg"
+              alt="Profile image"
+              borderRadius='full'
+              width="100%"
+              height="100%"
+            />
           </Box>
         </Box>
       </Box>
