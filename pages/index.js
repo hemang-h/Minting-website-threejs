@@ -82,7 +82,7 @@ const Home = () => {
           for more details.
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works" scroll={false}>
+          <NextLink href="/mint" scroll={false}>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               NFT Minting
             </Button>
