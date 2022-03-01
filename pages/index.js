@@ -76,7 +76,7 @@ const Home = () => {
         We make sure to not only do your blockchain development at the highest level,
         but also we make sure the most effective marketing is applied to reach the crypto 
         users, and a token sale is organised if required. Check our {' '}
-          <NextLink href="/works/inkdrophttps://tokenminds.co/" scroll={false}>
+          <NextLink href="https://tokenminds.co/" scroll={false}>
             <Link>website </Link>
           </NextLink>
           for more details.
