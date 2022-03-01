@@ -53,7 +53,7 @@ const page = () => {
             overflow='hidden'
           >
             <ProfileImage
-              src="/images/logo.jpeg"
+              src="/images/profileImage.jpeg"
               alt="Profile image"
               borderRadius='full'
               width="100%"
