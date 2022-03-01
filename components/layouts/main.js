@@ -1,5 +1,5 @@
  import Head from 'next/head'
- import Navbar from '../navbar'
+ import Navbar from '../navbar.js'
  import {Box, container} from '@chakra-ui/react'
 
  const Main = ({children, router}) => {
@@ -9,6 +9,8 @@
                  <meta name="viewport" content="width-device-width, intial-scale=1" />
                  <meta name="description" content="TOkenMinds Minting" />
              </Head>
+
+            <Navbar path={router.asPath} />
 
              <container maxW="container.md" pt={14}>
                  {children}
