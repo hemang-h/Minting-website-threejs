@@ -12,6 +12,9 @@ import {
 } from '@chakra-ui/react'
 import Image from 'next/image'
 import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import NextLink from 'next/link'
+import { ChevronRightIcon } from '@chakra-ui/icons'
 
 const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -69,16 +72,14 @@ const Home = () => {
           Work
         </Heading>
         <Paragraph>
-          Takuya is a freelance and a full-stack developer based in Osaka with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera. Currently, he is living off of his own
-          product called{' '}
-          <NextLink href="/works/inkdrop" scroll={false}>
-            <Link>Inkdrop</Link>
+        TokenMinds is one of the leading Blockchain Agencies, and has been voted the No 1 ranking one on Hackernoon.
+        We make sure to not only do your blockchain development at the highest level,
+        but also we make sure the most effective marketing is applied to reach the crypto 
+        users, and a token sale is organised if required. Check our {' '}
+          <NextLink href="/works/inkdrophttps://tokenminds.co/" scroll={false}>
+            <Link>website </Link>
           </NextLink>
-          .
+          for more details.
         </Paragraph>
         <Box align="center" my={4}>
           <NextLink href="/works" scroll={false}>
