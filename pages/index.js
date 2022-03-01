@@ -53,7 +53,7 @@ const page = () => {
             overflow='hidden'
           >
             <ProfileImage
-              src="/images/takuya.jpg"
+              src="/images/logo.jpeg"
               alt="Profile image"
               borderRadius='full'
               width="100%"
