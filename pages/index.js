@@ -11,12 +11,13 @@ import {
   chakra
 } from '@chakra-ui/react'
 import Image from 'next/image'
+import Section from '../components/section'
 
 const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
   })
 
-const page = () => {
+const Home = () => {
     return(
         <Container>
     <Box
@@ -62,8 +63,34 @@ const page = () => {
           </Box>
         </Box>
       </Box>
+
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Work
+        </Heading>
+        <Paragraph>
+          Takuya is a freelance and a full-stack developer based in Osaka with a
+          passion for building digital services/stuff he wants. He has a knack
+          for all things launching products, from planning and designing all the
+          way to solving real-life problems with code. When not online, he loves
+          hanging out with his camera. Currently, he is living off of his own
+          product called{' '}
+          <NextLink href="/works/inkdrop" scroll={false}>
+            <Link>Inkdrop</Link>
+          </NextLink>
+          .
+        </Paragraph>
+        <Box align="center" my={4}>
+          <NextLink href="/works" scroll={false}>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              My portfolio
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+
         </Container>
     )
 }
 
-export default page 
+export default Home  
