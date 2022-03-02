@@ -18,6 +18,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
 import { IoLogoTwitter, IoLogoGoogle, IoLogoLinkedin } from 'react-icons/io5'
+import thumbYouTube from '../public/images/thumbYoutube.png'
+import website from '../public/images/website.png'
 
 import Image from 'next/image'
 
@@ -25,9 +27,9 @@ const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
   })
 
-const Home = () => {
-    return(
-        <Container>
+const Home = () => (
+  <Layout>
+  <Container>
     <Box
         borderRadius="lg"
         mb={6}
@@ -117,7 +119,7 @@ const Home = () => {
         </BioSection>
       </Section>
 
-      <Section delay={0.6}>
+      <Section delay={0.7}>
         <Heading as="h3" variant="section-title">
           Contact Us
         </Heading>
@@ -158,9 +160,35 @@ const Home = () => {
         </List>
       </Section>
       
+      <Section delay={0.8}>
+      <SimpleGrid columns={[1, 2, 2]} gap={6}>
+          <GridItem
+            href="https://www.youtube.com/channel/UCJ-eEOXKjYIIeg4VCEYL4kA"
+            title="Dev as Life"
+            thumbnail={thumbYouTube}
+          >
+            My YouTube channel
+          </GridItem>
+          <GridItem
+            href="https://tokenminds.co/"
+            title="Website"
+            thumbnail={website}
+          >
+            (Can give professional website link)
+          </GridItem>
+        </SimpleGrid>
 
-        </Container>
-    )
-}
+        <Box align="center" my={4}>
+          <NextLink href="/posts" scroll={false}>
+            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+              Popular posts
+            </Button>
+          </NextLink>
+        </Box>
+      </Section>
+    </Container>
+  </Layout>
+)
 
+        
 export default Home  
