@@ -1,5 +1,6 @@
+import NextLink from 'next/link'
 import {
-    Link,
+  Link,
   Container,
   Heading,
   Box,
@@ -10,13 +11,16 @@ import {
   useColorModeValue,
   chakra
 } from '@chakra-ui/react'
-import Image from 'next/image'
-import Section from '../components/section'
-import Paragraph from '../components/paragraph'
-import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import { BioYear } from '../components/bio'
-import { BioSection } from '../components/bio'
+import Paragraph from '../components/paragraph'
+import { BioSection, BioYear } from '../components/bio'
+import Layout from '../components/layouts/article'
+import Section from '../components/section'
+import { GridItem } from '../components/grid-item'
+import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
+import thumbYouTube from '../public/images/links/youtube.png'
+import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -92,27 +96,79 @@ const Home = () => {
         </Box>
       </Section>
 
-        <Section delay={0.4}>
-        <Heading as="h3" variant="section-title">
-          Roadmap 
-        </Heading>
-        </Section>
+      <Section delay={0.4}>
+      <Heading as="h3" variant="section-title">
+        Roadmap 
+      </Heading>
+      </Section>
+      <BioSection>
+          <BioYear>Story 1</BioYear>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis pellentesque orci. Maecenas vitae convallis erat. Nunc dignissim semper purus, eget semper nisi pellentesque in. Vestibulum vel diam ac libero sagittis fringilla. Nulla feugiat sem eget imperdiet ullamcorper. Maecenas interdum tincidunt ornare. Proin et diam id eros aliquet ornare.
+      </BioSection>
+      <Section delay={0.5}>
         <BioSection>
-           <BioYear>Story 1</BioYear>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis pellentesque orci. Maecenas vitae convallis erat. Nunc dignissim semper purus, eget semper nisi pellentesque in. Vestibulum vel diam ac libero sagittis fringilla. Nulla feugiat sem eget imperdiet ullamcorper. Maecenas interdum tincidunt ornare. Proin et diam id eros aliquet ornare.
+          <BioYear>Story 2</BioYear>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis pellentesque orci. Maecenas vitae convallis erat. Nunc dignissim semper purus, eget semper nisi pellentesque in. Vestibulum vel diam ac libero sagittis fringilla. Nulla feugiat sem eget imperdiet ullamcorper. Maecenas interdum tincidunt ornare. Proin et diam id eros aliquet ornare.
         </BioSection>
-        <Section delay={0.5}>
-          <BioSection>
-           <BioYear>Story 2</BioYear>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis pellentesque orci. Maecenas vitae convallis erat. Nunc dignissim semper purus, eget semper nisi pellentesque in. Vestibulum vel diam ac libero sagittis fringilla. Nulla feugiat sem eget imperdiet ullamcorper. Maecenas interdum tincidunt ornare. Proin et diam id eros aliquet ornare.
-          </BioSection>
-        </Section>
-        <Section delay={0.6}>
-          <BioSection>
-           <BioYear>Story 3</BioYear>
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis pellentesque orci. Maecenas vitae convallis erat. Nunc dignissim semper purus, eget semper nisi pellentesque in. Vestibulum vel diam ac libero sagittis fringilla. Nulla feugiat sem eget imperdiet ullamcorper. Maecenas interdum tincidunt ornare. Proin et diam id eros aliquet ornare.
-          </BioSection>
-        </Section>
+      </Section>
+      <Section delay={0.6}>
+        <BioSection>
+          <BioYear>Story 3</BioYear>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis pellentesque orci. Maecenas vitae convallis erat. Nunc dignissim semper purus, eget semper nisi pellentesque in. Vestibulum vel diam ac libero sagittis fringilla. Nulla feugiat sem eget imperdiet ullamcorper. Maecenas interdum tincidunt ornare. Proin et diam id eros aliquet ornare.
+        </BioSection>
+      </Section>
+
+      <Section delay={0.6}>
+        <Heading as="h3" variant="section-title">
+          Contact Us
+        </Heading>
+        <List>
+          <ListItem>
+            <Link href="https://github.com/craftzdog" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoGithub />}
+              >
+                @craftzdog
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoTwitter />}
+              >
+                @inkdrop_app (English)
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://twitter.com/craftzdog" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoTwitter />}
+              >
+                @craftzdog (日本語)
+              </Button>
+            </Link>
+          </ListItem>
+          <ListItem>
+            <Link href="https://instagram.com/craftzdog" target="_blank">
+              <Button
+                variant="ghost"
+                colorScheme="teal"
+                leftIcon={<IoLogoInstagram />}
+              >
+                @craftzdog
+              </Button>
+            </Link>
+          </ListItem>
+        </List>
+      </Section>
       
 
         </Container>
