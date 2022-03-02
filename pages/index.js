@@ -17,9 +17,8 @@ import { BioSection, BioYear } from '../components/bio'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { GridItem } from '../components/grid-item'
-import { IoLogoTwitter, IoLogoInstagram, IoLogoGithub } from 'react-icons/io5'
-import thumbYouTube from '../public/images/links/youtube.png'
-import thumbInkdrop from '../public/images/works/inkdrop_eyecatch.png'
+import { IoLogoTwitter, IoLogoGoogle, IoLogoLinkedin } from 'react-icons/io5'
+
 import Image from 'next/image'
 
 const ProfileImage = chakra(Image, {
@@ -124,46 +123,35 @@ const Home = () => {
         </Heading>
         <List>
           <ListItem>
-            <Link href="https://github.com/craftzdog" target="_blank">
+            <Link href="https://www.linkedin.com/company/tokenmindz/mycompany/" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<IoLogoGithub />}
+                leftIcon={<IoLogoLinkedin />}
               >
-                @craftzdog
+                TokenMinds
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/inkdrop_app" target="_blank">
+            <Link href="https://twitter.com/token_minds" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
                 leftIcon={<IoLogoTwitter />}
               >
-                @inkdrop_app (English)
+                @token_minds
               </Button>
             </Link>
           </ListItem>
           <ListItem>
-            <Link href="https://twitter.com/craftzdog" target="_blank">
+            <Link href="mailto:hemang@tokenminds.co" target="_blank">
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<IoLogoTwitter />}
+                leftIcon={<IoLogoGoogle />}
               >
-                @craftzdog (日本語)
-              </Button>
-            </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="https://instagram.com/craftzdog" target="_blank">
-              <Button
-                variant="ghost"
-                colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
-              >
-                @craftzdog
+                E-mail
               </Button>
             </Link>
           </ListItem>
