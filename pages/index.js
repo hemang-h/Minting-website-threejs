@@ -15,6 +15,8 @@ import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import { BioYear } from '../components/bio'
+import { BioSection } from '../components/bio'
 
 const ProfileImage = chakra(Image, {
     shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
@@ -89,6 +91,29 @@ const Home = () => {
           </NextLink>
         </Box>
       </Section>
+
+        <Section delay={0.4}>
+        <Heading as="h3" variant="section-title">
+          Roadmap 
+        </Heading>
+        </Section>
+        <BioSection>
+           <BioYear>Story 1</BioYear>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis pellentesque orci. Maecenas vitae convallis erat. Nunc dignissim semper purus, eget semper nisi pellentesque in. Vestibulum vel diam ac libero sagittis fringilla. Nulla feugiat sem eget imperdiet ullamcorper. Maecenas interdum tincidunt ornare. Proin et diam id eros aliquet ornare.
+        </BioSection>
+        <Section delay={0.5}>
+          <BioSection>
+           <BioYear>Story 2</BioYear>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis pellentesque orci. Maecenas vitae convallis erat. Nunc dignissim semper purus, eget semper nisi pellentesque in. Vestibulum vel diam ac libero sagittis fringilla. Nulla feugiat sem eget imperdiet ullamcorper. Maecenas interdum tincidunt ornare. Proin et diam id eros aliquet ornare.
+          </BioSection>
+        </Section>
+        <Section delay={0.6}>
+          <BioSection>
+           <BioYear>Story 3</BioYear>
+           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis pellentesque orci. Maecenas vitae convallis erat. Nunc dignissim semper purus, eget semper nisi pellentesque in. Vestibulum vel diam ac libero sagittis fringilla. Nulla feugiat sem eget imperdiet ullamcorper. Maecenas interdum tincidunt ornare. Proin et diam id eros aliquet ornare.
+          </BioSection>
+        </Section>
+      
 
         </Container>
     )
