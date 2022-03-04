@@ -19,6 +19,8 @@ import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
 import ConnectWallet from './Metamask/ConnectWallet'
 import ConnectedWallet from './Metamask/ConnectedWallet'
+import useWeb3Modal from '../hooks/useWeb3Modal'
+
 
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
@@ -39,7 +41,9 @@ const LinkItem = ({ href, path, target, children, ...props }) => {
 }
 
 const Navbar = props => {
+  const { web3Provider, address, balance } = useWeb3Modal()
   const { path } = props
+  
 
   return (
     <Box
@@ -124,12 +128,14 @@ const Navbar = props => {
             </Menu>
           </Box>
         </Box>
-        <Flex>
+      
+      <Flex>
         {web3Provider ? <ConnectedWallet address={address} balance={balance} /> : <ConnectWallet />}
-      </Flex>
+      </Flex>  
       </Container>
     </Box>
   )
 }
 
 export default Navbar
+export { getServerSideProps } from '../components/chakra'
