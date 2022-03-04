@@ -124,6 +124,9 @@ const Navbar = props => {
             </Menu>
           </Box>
         </Box>
+        <Flex>
+        {web3Provider ? <ConnectedWallet address={address} balance={balance} /> : <ConnectWallet />}
+      </Flex>
       </Container>
     </Box>
   )
