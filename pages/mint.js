@@ -3,7 +3,7 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import useWeb3Modal from '../hooks/useWeb3Modal'
-import Landing from './landing'
+import Landing from './Landing'
 
 
 
