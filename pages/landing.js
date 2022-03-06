@@ -19,6 +19,7 @@ const Landing = () => {
     maxPerTx,
     ownedWhitelist,
     ownedAirdrop,
+    totalSupply,
     whitelistMint,
     airdropMint,
     publicMint,
@@ -36,7 +37,7 @@ const Landing = () => {
       <Heading size="md" mb={5}>
         Public Mint
       </Heading>
-      <Mint maxMint={maxPerTx} numberOfToken={0} mint={publicMint} />
+      <Mint maxMint={maxPerTx} numberOfToken={totalSupply} mint={publicMint} />
     </>
   )
 
