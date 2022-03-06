@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider, Box, Flex, Center } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
@@ -14,9 +14,27 @@ const mint = () => {
       <Heading as="h3" fontSize={20} mb={4}>
         Minting
       </Heading>
+
+    <Box>
+      {
+        web3Provider ? (
+          <Landing />
+        )
+        :
+        (
+          <Flex alignItems="center" justifyContent="center">
+            <Text fontSize="lg">
+              Please connect your Metamask :)
+            </Text>
+          </Flex>
+        )
+      }
+    </Box>
+
     </Container>
    </Layout> 
-)      
+  
+  )      
 }
 export default mint
 export { getServerSideProps } from '../components/chakra'
