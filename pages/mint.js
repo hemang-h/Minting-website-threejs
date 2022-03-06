@@ -1,8 +1,9 @@
-import { Container, Heading, SimpleGrid, Divider, Box, Flex, Center } from '@chakra-ui/react'
+import { Container, Heading, SimpleGrid, Divider, Box, Flex, Text } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { WorkGridItem } from '../components/grid-item'
 import useWeb3Modal from '../hooks/useWeb3Modal'
+import Landing from './landing'
 
 
 
