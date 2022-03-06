@@ -1,7 +1,7 @@
 import useAlphaWhale from '../hooks/useAlphaWhale'
 
-import TxHash from '../../components/TxHash'
-import Mint from '../../components/Mint'
+import TxHash from '../components/TxHash'
+import Mint from '../components/Mint'
 
 import { Text, Flex, Heading, Progress, Container } from '@chakra-ui/react'
 import { useState } from 'react'
