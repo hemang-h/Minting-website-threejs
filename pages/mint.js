@@ -6,8 +6,9 @@ import useWeb3Modal from '../hooks/useWeb3Modal'
 
 
 
-const mint = () => (
-  const { web3provider } = useWeb3Modal() 
+const mint = () => {
+  const { web3Provider } = useWeb3Modal() 
+  return (
   <Layout title="Minting">
     <Container>
       <Heading as="h3" fontSize={20} mb={4}>
@@ -16,6 +17,6 @@ const mint = () => (
     </Container>
    </Layout> 
 )      
-
+}
 export default mint
 export { getServerSideProps } from '../components/chakra'
