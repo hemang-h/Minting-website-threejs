@@ -30,6 +30,7 @@ const useAlphaWhale = () => {
 
   const [owned, setOwned] = useState()
   const [owner, setOwner] = useState()
+  const [totalSupply, setTotalSupply] = useState()
 
   const [mintPrice, setMintPrice] = useState()
   const [maxPerWhitelist, setMaxPerWhitelist] = useState()
@@ -38,6 +39,7 @@ const useAlphaWhale = () => {
 
   const [ownedWhitelist, setOwnedWhitelist] = useState()
   const [ownedAirdrop, setOwnedAirdrop] = useState()
+  
 
   const fetchState = useRequestState()
   const fetchInfo = useCallback(async () => {
@@ -50,9 +52,11 @@ const useAlphaWhale = () => {
       const maxPerWhitelist = await contract.MAX_PER_WHITELIST_ADDRESS()
       const maxPerAirdrop = await contract.MAX_PER_AIRDROP_ADDRESS()
       const maxPerTx = await contract.MAX_PER_TX()
+      const totalSupply = await contract.totalSupply()
 
       const ownedWhitelist = await contract.whitelistMinted(address)
       const ownedAirdrop = await contract.airdropMinted(address)
+      
 
       const owned = ethers.utils.formatUnits(ownedNFTs, 0)
 
@@ -61,6 +65,7 @@ const useAlphaWhale = () => {
       setOwned(owned)
       setOwner(owner)
       setMintPrice(mintPriceValue)
+      setTotalSupply(totalSupply)
 
       setMaxPerWhitelist(ethers.utils.formatUnits(maxPerWhitelist, 0))
       setMaxPerAirdrop(ethers.utils.formatUnits(maxPerAirdrop, 0))
@@ -229,6 +234,7 @@ const useAlphaWhale = () => {
     maxPerTx,
     ownedWhitelist,
     ownedAirdrop,
+    
     whitelistMint,
     airdropMint,
     publicMint,
