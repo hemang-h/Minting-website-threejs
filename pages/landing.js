@@ -1,4 +1,4 @@
-import useAlphaWhale from '../../hooks/useAlphaWhale'
+import useAlphaWhale from '../hooks/useAlphaWhale'
 
 import TxHash from '../../components/TxHash'
 import Mint from '../../components/Mint'
