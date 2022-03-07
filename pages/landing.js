@@ -3,17 +3,16 @@ import useAlphaWhale from '../hooks/useAlphaWhale'
 import TxHash from '../components/TxHash'
 import Mint from '../components/Mint'
 
-import { Text, Flex, Heading, Progress, Container } from '@chakra-ui/react'
-import { useState } from 'react'
+import { Heading, Progress, Container } from '@chakra-ui/react'
+
 
 const Landing = () => {
   const {
     fetching,
     loading,
-    success,
+    
     txHash,
-    owned,
-    owner,
+    
     maxPerWhitelist,
     maxPerAirdrop,
     maxPerTx,
@@ -23,7 +22,7 @@ const Landing = () => {
     whitelistMint,
     airdropMint,
     publicMint,
-    reset,
+    
   } = useAlphaWhale()
 
   const UIContent = (
