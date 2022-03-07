@@ -89,7 +89,7 @@ const Home = () => (
           for more details.
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/mint" scroll={false}>
+          <NextLink href="/mint" scroll={false} passHref>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               NFT Minting
             </Button>
@@ -179,7 +179,7 @@ const Home = () => (
         </SimpleGrid>
 
         <Box align="center" my={4}>
-          <NextLink href="/posts" scroll={false}>
+          <NextLink href="/posts" scroll={false} passHref>
             <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
               Popular posts
             </Button>
