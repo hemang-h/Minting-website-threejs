@@ -1,20 +1,16 @@
 {
     "root": true,
-    "extends": "next",
+    "extends": ["next","plugin:react/recommended"],
     "rules": {
-       "plugin":[
-            
-                "react/recommended"
-            
-       ],
-              "no-unused-vars": [
+        "no-unused-vars": [
         "error",
         {
           "argsIgnorePattern": "^_",
           "varsIgnorePattern": "^_"
         }
       ],
-      "react/display-name": 0
+      "react/display-name": 0,
+      "react/react-in-jsx-scope": "off"
     }
 }
 
