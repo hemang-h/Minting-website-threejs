@@ -1,13 +1,12 @@
-import { Container, Heading, SimpleGrid, Divider, Box, Flex, Text } from '@chakra-ui/react'
+import { Container, Heading, Box, Flex, Text } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { WorkGridItem } from '../components/grid-item'
+
 import useWeb3Modal from '../hooks/useWeb3Modal'
 import Landing from './Landing'
 
 
 
-const mint = () => {
+const Mint = () => {
   const { web3Provider } = useWeb3Modal() 
   return (
   <Layout title="Minting">
@@ -37,5 +36,5 @@ const mint = () => {
   
   )      
 }
-export default mint
+export default Mint
 export { getServerSideProps } from '../components/chakra'

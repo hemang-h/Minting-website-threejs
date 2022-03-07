@@ -1,11 +1,11 @@
 import { useState } from 'react'
 
-import { Box, Flex, Heading, VStack, Icon, Button, Link, Text, Spacer } from '@chakra-ui/react'
+import { Box, Flex, Heading, Icon, Button } from '@chakra-ui/react'
 
-import { IoIosRemove, IoIosAdd, IoMdOpen } from 'react-icons/io'
+import { IoIosRemove, IoIosAdd } from 'react-icons/io'
 
 const Mint = (props) => {
-  const { maxMint, numberOfToken, mint, loading } = props
+  const { maxMint, numberOfToken, mint } = props
   const [amount, setAmount] = useState(1)
 
   return (
