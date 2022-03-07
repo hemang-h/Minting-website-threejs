@@ -2,7 +2,12 @@
     "root": true,
     "extends": "next",
     "rules": {
-      "no-unused-vars": [
+       "plugin":[
+            
+                "react/recommended"
+            
+       ],
+              "no-unused-vars": [
         "error",
         {
           "argsIgnorePattern": "^_",
@@ -11,4 +16,5 @@
       ],
       "react/display-name": 0
     }
-  }
+}
+
